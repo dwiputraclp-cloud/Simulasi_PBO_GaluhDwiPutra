@@ -28,9 +28,10 @@ class PendaftaranKedinasan extends Pendaftaran
         $this->instansiSponsor = $instansi_sponsor;
     }
 
+    // Overriding method untuk Jalur Kedinasan (Surcharge 25%)
     public function hitungTotalBiaya()
     {
-        return $this->biayaPendaftaranDasar;
+        return $this->biayaPendaftaranDasar * 1.25;
     }
 
     public function tampilkanInfoJalur()

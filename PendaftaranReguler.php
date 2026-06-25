@@ -14,7 +14,7 @@ class PendaftaranReguler extends Pendaftaran
         $nilai_ujian,
         $biaya_pendaftaran_dasar,
         $pilihan_prodi,
-        $lokasi_kampus
+        $lokasi_campus
     ) {
         parent::__construct(
             $id_pendaftaran,
@@ -25,9 +25,10 @@ class PendaftaranReguler extends Pendaftaran
         );
 
         $this->pilihanProdi = $pilihan_prodi;
-        $this->lokasiKampus = $lokasi_kampus;
+        $this->lokasiKampus = $lokasi_campus;
     }
 
+    // Overriding method untuk Jalur Reguler
     public function hitungTotalBiaya()
     {
         return $this->biayaPendaftaranDasar;

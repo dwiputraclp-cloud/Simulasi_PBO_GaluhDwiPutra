@@ -28,9 +28,10 @@ class PendaftaranPrestasi extends Pendaftaran
         $this->tingkatPrestasi = $tingkat_prestasi;
     }
 
+    // Overriding method untuk Jalur Prestasi (Potongan Rp50.000)
     public function hitungTotalBiaya()
     {
-        return $this->biayaPendaftaranDasar;
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     public function tampilkanInfoJalur()
